@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+
+<!--
+    La estructura basica de un formulario se compone de 4 elementos:
+
+    form -> es la etiqueta que engloba nuestro formulario
+
+    label -> sirve para escribir el nombre de campo a rellenar. Debe de tener el atributo for al cual se le indica un id que lo que hara sera emparejar el label con su imput correspondiente
+    
+    PARTE 1 HASTA PARTE 3
+    input -> sirve para crear un campo que permitira al usarlo interactuar. El unico atributo obligatorio del imput es name. input type:
+        button -> se comporta igual que un boton <botton>
+        color: -> se utiliza para especificar un color
+        date: -> para introducir una fecha
+        datetime-local -> fecha y hora
+        time -> se utiliza paras introducir hora
+           TIP
+              *se recomienda usar datetime-local y time para seleccionar fecha y hora
+              
+        email -> para introducir un email
+        hidden -> campo oculto, no se mostrara
+        month -> para introducir un mes
+        number -> utuliza valores numericos
+        password -> para contraseñas
+        range -> para establecer un rango
+        reset -> para resetear el formulario
+        search -> para las barras de busqueda
+        submit -> para enviar el formulario
+        tel -> para introducir numeros de telefono
+        text -> valor por defecto
+        url -> para introducir URLs
+        week -> para introducir el numero de semana del año
+
+        PARTE 4 HASTA PARTE 8
+        radio -> permite seleccionar una unica opcion de una lista de opciones relacionadas
+        checkbox -> permite seleccionar varias opciones 
+        select -> crea una lista de opciones donde podemos seleccionar una o varias opciones
+    
+            Cada opcion ira dentro de una etiqueta <option> </option>
+
+            Si tenemos muchas opciones podemos ordenarlas por categorias a traves de la etiqueta <optgroup> con el atributo label para nombrar la categoria
+        
+        PARTE 9
+        fieldset -> se utiliza para agrupar elementos dentro de un formulario
+        legend -> representa una etiqueta para cargar archivos y enviarlos desde un formulario
+        file -> este imput se utiliza para cargar archivos y enviarlos desde un formulario
+        meter -> representa un valor dentro de un rango conocido
+        progress -> representa el progreso de la tarea
+        textarea -> se utiliza para introducir texto en un formulario
+
+    button -> crea un boton que permitira enviar el formulario
+
+    PARTE 10
+    Atributos de los formularios:
+        placeholder -> da una pista de lo que el usuario tiene que introducir
+        required -> campo sea obligatorio
+        readonly -> campo solo lectura
+        min - max -> establece minimo y maximo de caracteres de un campo de numerico
+        maxlenght - minlenght -> establece minimo y maximo de caracteres de un campo de texto
+        selected -> equivale a checked en los select, sirve para establecer una opcion por defecto
+        disabled -> desactiva el campo, no se podra escribir en el autofocus
+        autofocus -> para poner el foco por defecto al cargar el formulario
+-->
+
+<body>
+    <h2>Parte 1</h2>
+    <form>
+        <label for="name">Nombre</label>
+        <input id="name">
+        <button>Enviar</button>
+    </form>
+    
+    <form>
+        <input type="submit" value="Enviar"> 
+    </form>
+
+    <form>
+        <input type="date">
+        <input type="datetime-local">
+        <input type="date">
+        <input type="time">
+        <input type="month">
+        <input type="week">
+    </form>
+
+    <h2>Parte 2</h2>
+    <form>
+        <div>    
+            <label> search
+                <input type="search">
+            </label>
+        </div>
+
+        <div>  
+            <label> telephone
+                <input type="tel">
+            </label>
+        </div>  
+        <div>  
+            <label> email
+                <input type="email">
+            </label>
+        </div> 
+
+        <div>
+            <label> password
+                <input type="password">
+            </label>
+        </div> 
+
+        <div> 
+            <label> URLs
+                <input type="url">
+            </label>
+        </div> 
+    </form>
+
+    <h2>Parte 3</h2>
+    <form>
+        <input type="color">
+        <input type="number">
+        <input type="range" step="1" min="" max="">
+        <input type="reset">
+        <input type="text">
+    </form>
+    
+    <form>
+        <h2>Parte 4</h2>
+        <h3>Genero</h3>
+        <label> Masculino
+            <input type="radio" name="gender" value="masculino">
+        </label>
+
+        <label> Femenino
+            <input type="radio" name="gender" value="femenino">
+        </label>
+
+        <label> Desconocido
+            <input type="radio" name="gender" value="desconocido" checked>
+        </label>
+    </form>
+    <!-- Aqui no se puede poner mas de un checked -->
+
+    <h2>Parte 5</h2>
+    <form>
+        <label>
+            HTMl
+            <input type="checkbox" name="languages" value="html" checked>
+        </label>
+        
+        <label>
+            CSS
+            <input type="checkbox" name="languages" value="css" checked>
+        </label>
+        
+        <label>
+            JavaScript
+            <input type="checkbox" name="languages" value="javascript">
+        </label>
+    </form>
+    <!-- Aqui si se puede poner mas de un checked -->
+    
+    <h2>Parte 6</h2>
+    <form>
+        <select name="lenguajes">
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="javascript">JavaScript</option>
+        </select>
+    </form>
+    <!-- Para elegir uno -->
+
+    <form>
+        <select name="lenguajes" multiple>
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="javascript">JavaScript</option>
+        </select>
+    </form>
+    <!-- Con la opcion multiple podemos elegir varias a la vez (Para verlo en el ejemplo utiliza la tecla command y puedes elegir varios a la vez)-->
+
+    <h2>Parte 7</h2>
+    <form>
+        <select name="lenguajes">
+            <optgroup label="frontend">
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+                <option value="javascript">JavaScript</option>
+            </optgroup>
+
+            <optgroup label="backend">
+                <option value="python">Python</option>
+                <option value="java">Java</option>
+                <option value="php">PHP</option>
+                <option value="ruby">Ruby</option>
+            </optgroup>
+        </select>
+    </form>
+
+    <h2>Parte 8</h2>
+    <form>
+        <input type="list" list="lenguajes">
+        <datalist id="lenguajes">
+            <option value="html"></option>
+            <option value="css"></option>
+            <option value="javascript"></option>
+            <option value="python"></option>
+            <option value="java"></option>
+            <option value="php"></option>
+            <option value="ruby"></option>
+        </datalist>
+    </form>
+
+    <h2>Parte 9</h2>
+    <form>
+        <fieldset>
+            <legend> Datos personales</legend>
+            <div>
+                <label for="name">Nombre</label>
+                <input type="text" id="name"> 
+            </div>
+        
+            <div>
+                <label for="surname">Apellidos</label>
+                <input type="text" id="surname">
+            </div>
+        </fieldset>
+
+<!-- Esto es a parte -->
+        <input type="file">
+        <label for="fuel">Combustible</label>
+        <meter id="fuel"min="0" max="100" value="50" low="30" high="75" optimum="50"></meter>
+
+        <label for="task">Tarea 1</label>
+        <progress id="task" max="100" value="75"></progress>
+
+        <label for="message">Mensaje</label>
+        <textarea name="" id="message" cols="70" rows="10"></textarea>
+    </form>
+
+    <h2>Parte 10</h2>
+    <form>
+        <input type="text" placeholder="Introsuce tu nombre" required>
+        <input type="text" value="Hola" readonly>
+        <input type="text" value="Hola" disabled>
+
+        <select name="numbers">
+            <option value="one">One</option>
+            <option value="two" selected>Two</option>
+        </select>
+
+        <input type="number" min="" max="2">
+        <input type="text" minlength="3" maxlength="5" required autofocus>
+        <input type="submit">
+    </form>
+</body>
+</html>

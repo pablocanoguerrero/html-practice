@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>srcset</title>
+
+    <style>
+        img, video {
+            max-width: 100%;
+            width: px;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Contenido embebido</h1>
+    <h2>IMAGENES</h2>
+    <img srcset="/carpet-of-pictures/assets/images/jpeg.jpeg, /carpet-of-pictures/assets/images/jpeg2.webp 2x" alt="Minions">
+
+    <!-- Or -->
+
+    <picture>
+        <source srcset="/carpet-of-pictures/assets/images/jpeg.jpeg, /carpet-of-pictures/assets/images/jpeg2.webp 2x"
+        img src="/carpet-of-pictures/assets/images/jpeg.jpeg, /carpet-of-pictures/assets/images/jpeg2.webp" 2x alt="Minions">
+
+        <!-- Or -->
+
+        <source srcset="/carpet-of-pictures/assets/images/jpeg.jpeg" media="(max-width:1200px)"
+        img src="/carpet-of-pictures/assets/images/jpeg.jpeg" alt="Minions">
+    </picture>
+
+    <h2>AUDIO</h2>
+    <audio src="/carpet-of-pictures/assets/images/audio/como-suena-el-pedo-de-una-mujer.mp3" controls autoplay muted></audio>
+
+    <h2>VIDEO</h2>
+    <video src="/carpet-of-pictures/assets/images/audio/video/y2mate.com - IlloJuan se queda Loco ante el 5000IQ de Lolito_1080pFHR.mp4" controls autoplay muted loop poster="/carpet-of-pictures/assets/images/jpeg.jpeg"></video>
+
+    <h2>FIGURE</h2>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, nemo ullam. Esse sapiente, iusto et tempora, fugit dolorem vero optio reprehenderit praesentium minima quidem nihil dolore asperiores facilis ea non.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos nulla ipsam laudantium unde aut, eligendi enim molestias aspernatur sapiente accusantium voluptatibus debitis minus fuga earum perspiciatis voluptatem quia. Fugiat, necessitatibus.
+    </p>
+    <figure>
+        <img src="/carpet-of-pictures/assets/images/jpeg.jpeg" alt="Minion">
+        <figcaption>Amarillos</figcaption>
+    </figure>
+    <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam placeat, reiciendis nesciunt hic cumque nam exercitationem nobis, molestias, provident temporibus eum. At possimus repellat veniam incidunt blanditiis eius provident ad.
+    </p>
+
+</body>
+</html>

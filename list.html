@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List</title>
+</head>
+<body>
+
+    <!-- Las listas en HTML sirven para listar contenido. En funcion del tipo de contenido de nuestra lista tenemos tres tipos de listas:
+    
+       ul -> unordered list: se utilizan cuando el orden de los elementos no influye (lista de la compora)
+
+       ol -> ordered list: se utilizan cuando el orden de los elementos importantes (top 10)
+
+       Cada elemento de la lista se representa con un li, tanto en las ul como en las ol
+
+       Se pueden construir listas 
+
+       dl -> definition list: se utilizan para hacer una lista de definiciones (diccionario)
+
+          Cada elemento de la lista de definición (dl) lleva dos etiquetas:
+          
+          dt -> definición term: el térmico que vamos a definir
+          dd -> definición description: la descripción del termino
+    -->
+
+    <h1>Listas</h1>
+
+    <!-- Lista desornedada -->
+
+    <!-- REFERENCIA NAVIGATION-VIA-ANCHORS -->
+    <nav>
+        <ul>
+            <li><a href="#noticia-1">Noticia 1</a></li>
+            <li><a href="#noticia-2">Noticia 2</a></li>
+            <li><a href="#noticia-3">Noticia 3</a></li>
+        </ul>
+     </nav>
+        
+    <h2>Lista de la compra</h2>
+    <ul>
+        <li>Pan</li>
+        <li>Huevos</li>
+        <li>Salchichas</li>
+    </ul>
+
+
+    <!-- Lista ornedada -->
+
+    <h2>Orden de aprendizaje en el desarrollo web</h2>
+    <ol>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ol>
+
+     <!-- Listas anidadas -->
+
+     <h2>Listas anidadas</h2>
+     <ol>
+         <li>
+             HTML
+             <ul>
+                 <li>Estructura</li>
+                 <li>Sintaxis</li>
+                 <li>Etiquetas</li>
+             </ul>
+         </li>
+         <li>CSS</li>
+         <li>JavaScript</li>
+     </ol>
+
+    <!-- Lista de definición -->
+
+    <h2>Lenguajes para el desarrollo web</h2>
+    <dl>
+        <dt>HTML</dt>
+        <dd>HyperTex Markup Lenguage: Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam non in saepe sint, illum repellendus corrupti animi ab dolor tenetur consequuntur reprehenderit! Alias reprehenderit reiciendis ipsum minus consequatur quasi? Repudiandae.</dd>
+    </dl>
+
+    <dl>
+        <dt>CSS</dt>
+        <dd>Cacade Style Sheets: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis explicabo ex excepturi sit, aspernatur odio quas nulla, alias quae velit odit pariatur. Dolorem non officiis repellat sed asperiores. Earum, necessitatibus.</dd>
+    </dl>
+
+    <dl>
+        <dt>JS</dt>
+        <dd>JavaScript: Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem magni dolores quas. Dignissimos, iste maiores. Fuga harum sit quasi mollitia dignissimos numquam, quae laborum sed labore aperiam excepturi officiis similique!</dd>
+    </dl>
+
+    <!-- Listas de definición
+            ol -> 
+               type: estilo de numeracion (1, A, a, I, i)
+               start: inicio de la secuenciaq (un numero)
+
+            ul ->
+               type: estilo de los items (disc, square, circle)
+    -->
+
+    <h2>Atributos de las listas</h2>
+    <ul type="scuare">
+        <li>Item</li>
+        <li>Item</li>
+        <li>Item</li>
+    </ul>
+
+    <ol type="a" start="3">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ol>
+
+
+</body>
+
+</html>
